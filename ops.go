@@ -56,3 +56,9 @@ func PaymentRUB(amount int) CreatePaymentOp {
 		}
 	}
 }
+
+func PaymentMetadata(data map[string]string) CreatePaymentOp {
+	return func(req *CreatePaymentRequest) {
+		req.Metadata = data
+	}
+}

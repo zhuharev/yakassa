@@ -17,6 +17,7 @@ type CreatePaymentRequest struct {
 	Confirmation      Confirmation       `json:"confirmation"`
 	Description       string             `json:"description"`
 	PaymentMethodData *PaymentMethodData `json:"payment_method_data,omitempty"`
+	Metadata          map[string]string  `json:"metadata,omitempty"`
 
 	// used in op func for inject context
 	Ctx            context.Context `json:"-"`
